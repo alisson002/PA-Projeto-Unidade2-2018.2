@@ -1,5 +1,6 @@
 #include "point.h"
 #include <iostream>
+#include <math.h>
 
 using namespace std;
 
@@ -38,27 +39,41 @@ float Point::getY(void){            //Recupera o valor da coordenada y do ponto.
     return y;
 
 }
-void Point::add(Point p){          //Adiciona as coordenadas (x,y) do ponto com as coordenadas
+//para o método add e sub também é possível usar o setXY
+void Point::add(Point pt){           //Adiciona as coordenadas (x,y) do ponto com as coordenadas
                                     //de um ponto P1(x1,y1) fornecido, armazenando o resultado
-    float somaX;                    //(x+x1,y+y1)  nas coordenadas de um novo ponto, que
+  /*float somaX;                    //(x+x1,y+y1)  nas coordenadas de um novo ponto, que
     float somaY;                    //deverá ser retornado para o cliente da classe.
 
-    somaX = p.getX()+getX();
-    somaY = p.getY()+getY();
+    somaX = pt.getX()+getX();
+    somaY = pt.getY()+getY();
 
     setX(somaX);
-    setY(somaY);
+    setY(somaY);*/
+
+    setX(pt.getX()+getX());
+    setY(pt.getY()+getY());
 
 }
-void Point::sub(Point p){           //Adiciona as coordenadas (x,y) do ponto com as coordenadas
+void Point::sub(Point pt){           //Adiciona as coordenadas (x,y) do ponto com as coordenadas
                                     //de um ponto P1(x1,y1) fornecido, armazenando o resultado
-    float subX;                    //(x-x1,y-y1)  nas coordenadas de um novo ponto, que
+  /*float subX;                     //(x-x1,y-y1)  nas coordenadas de um novo ponto, que
     float subY;                    //deverá ser retornado para o cliente da classe.
 
-    subX = getX()-p.getX();
-    subY = getY()-p.getY();
+    subX = -pt.getX()+getX();
+    subY = -pt.getY()+getY();
 
     setX(subX);
-    setY(subY);
+    setY(subY);*/
+
+    setX(-pt.getX()+getX());
+    setY(-pt.getY()+getY());
+}
+float Point::norma(void){         //retorna a distância do ponto para a origen
+
+   return sqrt(x*x+y*y);
 
 }
+
+
+

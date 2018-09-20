@@ -1,5 +1,6 @@
 #include <iostream>
 #include "point.h"
+#include <math.h>
 
 using namespace std;
 
@@ -10,20 +11,27 @@ int main()
     //e dai pra chamar o método usa -> ao invez de .
     //mas vai ser alterado altomaticamente
     //ex:p0.setX() vai para p0->setX()
-
-    Point p0;
+    Point p0,p;
     p0.setX(10);
     p0.setY(5);
-    cout<<"valor de p0: "<<p0.getX()<<";"<<p0.getY()<<endl;
+    p=p0;//Valores do ponto original sem alteração estão guardados em p
+    cout<<"Ponto original p0: ("<<p0.getX()<<" , "<<p0.getY()<<")"<<endl;
 
     Point p1;
     p1.setX(1);
     p1.setY(1);
-    cout<<"valor de p1: "<<p1.getX()<<";"<<p1.getY()<<endl;
+    cout<<"Ponto p1: ("<<p1.getX()<<" , "<<p1.getY()<<")"<<endl;
 
-    //p0 chamou add passou o objeto p1 como paramatro
-    //p1 funciona como se eu passace um vetor p1[qualquer]
+    //p0 chamou add e passou o objeto p1 como paramatro
+    //p1 funciona como se eu passasse um vetor p1[qualquer]
     //na forma p1, assim passando tudo que há nele
     p0.add(p1);
-    cout<<"Novo valor de p0: "<<p0.getX()<<";"<<p0.getY()<<endl;
+    cout<<"Novo ponto, soma de p0+p1: ("<<p0.getX()<<" , "<<p0.getY()<<")"<<endl;
+
+    p.sub(p1);
+    cout<<"Novo ponto, subtracao de p0-p1: ("<<p.getX()<<" , "<<p.getY()<<")"<<endl;
+
+    cout<<"Norma do ponto p1: "<<p1.norma()<<endl;
+
+return 0;
 }
