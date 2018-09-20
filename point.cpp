@@ -50,7 +50,7 @@ void Point::add(Point pt){           //Adiciona as coordenadas (x,y) do ponto co
 
     setX(somaX);
     setY(somaY);*/
-
+    Point np;
     setX(pt.getX()+getX());
     setY(pt.getY()+getY());
 
@@ -71,8 +71,16 @@ void Point::sub(Point pt){           //Adiciona as coordenadas (x,y) do ponto co
 }
 float Point::norma(void){         //retorna a distância do ponto para a origen
 
-   return sqrt(x*x+y*y);
+    return sqrt(x*x+y*y);
 
+}
+void Point::trasnlada(float a, float b){//Translada o ponto (x,y) de (+a,+b), de modo que, após a
+                                         //execução do método, as coordenadas do ponto serão (x+a,y+b)
+    setXY(x+a,y+b);
+
+}
+void Point::imprime(void){//Imprime o ponto na forma (xpos, ypos).
+    cout<<"Forma (xpos, ypos): ("<<x<<" , "<<y<<")"<<endl;
 }
 
 

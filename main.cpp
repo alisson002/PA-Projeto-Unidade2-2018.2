@@ -33,5 +33,8 @@ int main()
 
     cout<<"Norma do ponto p1: "<<p1.norma()<<endl;
 
+    p1.trasnlada(5,3);
+    p1.imprime();
+
 return 0;
 }
