@@ -5,7 +5,9 @@
 class Retangulo
 {
 public:
-    Retangulo();
+    Retangulo();//construtor
+    ~Retangulo();//destrutor
+
 };
 
 #endif // RETANGULO_H

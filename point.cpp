@@ -6,12 +6,12 @@ using namespace std;
 
 Point::Point(){
 
-    cout << "Construtor defalt\n";
+    cout << "Construtor Point\n";
 
 }
 Point::~Point(){
 
-    cout << "Destrutor defalt\n";
+    cout << "Destrutor Point\n";
 }
 void Point::setX(float mx){           //Define o valor da coordenada x do ponto.
 
@@ -68,6 +68,7 @@ void Point::sub(Point pt){           //Adiciona as coordenadas (x,y) do ponto co
 
     setX(-pt.getX()+getX());
     setY(-pt.getY()+getY());
+
 }
 float Point::norma(void){         //retorna a distância do ponto para a origen
 
@@ -76,11 +77,14 @@ float Point::norma(void){         //retorna a distância do ponto para a origen
 }
 void Point::trasnlada(float a, float b){//Translada o ponto (x,y) de (+a,+b), de modo que, após a
                                          //execução do método, as coordenadas do ponto serão (x+a,y+b)
-    setXY(x+a,y+b);
+    x = x+a;
+    y = y+b;
 
 }
 void Point::imprime(void){//Imprime o ponto na forma (xpos, ypos).
+
     cout<<"Forma (xpos, ypos): ("<<x<<" , "<<y<<")"<<endl;
+
 }
 
 
