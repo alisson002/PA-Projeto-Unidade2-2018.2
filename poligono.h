@@ -7,7 +7,7 @@ class Poligono
 {
 private:
     Point vertices[100];
-
+    int pontos = 1;
 public:
     Poligono();//construtor
     ~Poligono();//destrutor
