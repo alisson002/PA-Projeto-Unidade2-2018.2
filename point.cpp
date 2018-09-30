@@ -75,7 +75,7 @@ float Point::norma(void){         //retorna a distância do ponto para a origen
     return sqrt(x*x+y*y);
 
 }
-void Point::trasnlada(float a, float b){//Translada o ponto (x,y) de (+a,+b), de modo que, após a
+void Point::translada(float a, float b){//Translada o ponto (x,y) de (+a,+b), de modo que, após a
                                          //execução do método, as coordenadas do ponto serão (x+a,y+b)
     x = x+a;
     y = y+b;

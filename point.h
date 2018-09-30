@@ -18,7 +18,7 @@ public:
     void add(Point pt);                  //soma um novo ponto ao original
     void sub(Point pt);                  //subtrai um novo ponto do original
     float norma(void);                  //norma do ponto, sqrt(x²+y²)
-    void trasnlada(float a, float b);   //trasnlada o ponto cliente em (x+a,y+b)
+    void translada(float a, float b);   //trasnlada o ponto cliente em (x+a,y+b)
     void imprime(void);                 //printa o ponto cliente
 };
 

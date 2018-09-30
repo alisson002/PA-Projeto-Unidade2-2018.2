@@ -15,7 +15,7 @@ public:
     float getVertices(void);
     float area(void);
     void translada(float a, float b);
-    void rotaciona(float k, Point p);
+    void rotaciona(float theta);
     void imprime(void);
 };
 
