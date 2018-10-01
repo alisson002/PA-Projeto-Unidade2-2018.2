@@ -53,8 +53,8 @@ return A;
 void Poligono::translada(float a, float b){
 
     for(int cont=1;cont<=pontos;cont++){
-        vertices[cont].translada(a,b);
-    }
+        vertices[cont].translada(a,b);//utiliza de um método da classe Point
+    }                                 //para transladar o polígono
 
 }
 
@@ -73,8 +73,9 @@ void Poligono::imprime(){
 
     cout<<"Pontos do ppolígono:\n";
     for(int cont=0;cont<pontos;cont++){
-        cout<<"Ponto "<<cont<<endl;
-        vertices[cont].imprime();
-    }
 
+        vertices[cont].imprime();//utiliza de um método da classe Point
+        cout<<" -> ";            //para imprimir os pontos do polígono
+
+    }
 }

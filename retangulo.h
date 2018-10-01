@@ -3,11 +3,17 @@
 #include "poligono.h"
 
 
-class Retangulo:public Poligono
-{
+class Retangulo: public Poligono{
+
+private:
+
+    float x,y,altura,largura;
+
 public:
-    Retangulo();//construtor
+
+    Retangulo(float x,float y,float largura,float altura);//construtor
     ~Retangulo();//destrutor
+
 };
 
 #endif // RETANGULO_H

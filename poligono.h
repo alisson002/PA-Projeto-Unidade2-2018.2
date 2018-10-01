@@ -3,12 +3,15 @@
 #include "point.h"
 
 
-class Poligono
-{
+class Poligono{
+
 private:
+
     Point vertices[100];
     int pontos = 1;
+
 public:
+
     Poligono();//construtor
     ~Poligono();//destrutor
     void setVertices(float mx, float my);
@@ -17,6 +20,7 @@ public:
     void translada(float a, float b);
     void rotaciona(float theta);
     void imprime(void);
+
 };
 
 #endif // POLIGONO_H

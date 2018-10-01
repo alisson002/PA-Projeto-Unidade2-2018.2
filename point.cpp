@@ -72,7 +72,7 @@ void Point::sub(Point pt){           //Adiciona as coordenadas (x,y) do ponto co
 }
 float Point::norma(void){         //retorna a distância do ponto para a origen
 
-    return sqrt(x*x+y*y);
+    return sqrt(x*x+y*y);//**corrigir**
 
 }
 void Point::translada(float a, float b){//Translada o ponto (x,y) de (+a,+b), de modo que, após a

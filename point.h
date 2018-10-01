@@ -2,12 +2,15 @@
 #define POINT_H
 
 
-class Point
-{
+class Point{
+
 private:
+
     float x;
     float y;
+
 public:
+
     Point();                            //construtor
     ~Point();                           //destrutor
     void setX(float mx);                //ponto x, e atualiza o valor
@@ -20,6 +23,7 @@ public:
     float norma(void);                  //norma do ponto, sqrt(x²+y²)
     void translada(float a, float b);   //trasnlada o ponto cliente em (x+a,y+b)
     void imprime(void);                 //printa o ponto cliente
+
 };
 
 #endif // POINT_H
