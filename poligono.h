@@ -19,7 +19,7 @@ public:
     float area(void);
     void translada(float a, float b);
     void rotaciona(float theta);
-    void imprime(void);
+    void imprima(void);
 
 };
 

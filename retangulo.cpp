@@ -1,6 +1,6 @@
 #include "retangulo.h"
 #include <iostream>
-#include "poligono.h"
+
 
 using namespace std;
 
@@ -13,6 +13,7 @@ Retangulo::Retangulo(float x,float y,float largura,float altura){
     dist2 = y+altura;
 
     Poligono ret;//retângulo do tipo poligono
+
     //métodos da classe poligono
     ret.setVertices(x,y);
     ret.setVertices(dist,y);

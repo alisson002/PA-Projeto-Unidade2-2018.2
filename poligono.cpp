@@ -8,14 +8,12 @@ using namespace std;
 
 Poligono::Poligono(){
 
-    vertices[0].setXY(0,0);    //inicializa o primeiro vertice no ponto (0,0)
-    cout<<"Construtor Poligono\n";
 
 }
 
 Poligono::~Poligono(){
 
-    cout<<"Destrutor Poligono\n";
+
 
 }
 
@@ -69,10 +67,10 @@ void Poligono::rotaciona(float theta){
 
 }
 
-void Poligono::imprime(){
+void Poligono::imprima(){
 
-    cout<<"Pontos do ppolígono:\n";
-    for(int cont=0;cont<pontos;cont++){
+    cout<<"Pontos do poligono:\n";
+    for(int cont=1;cont<=pontos;cont++){
 
         vertices[cont].imprime();//utiliza de um método da classe Point
         cout<<" -> ";            //para imprimir os pontos do polígono

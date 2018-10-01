@@ -11,7 +11,7 @@ private:
 
 public:
 
-    Retangulo(float x,float y,float largura,float altura);//construtor
+    Retangulo(float x, float y, float largura, float altura);//construtor
     ~Retangulo();//destrutor
 
 };

@@ -1,12 +1,14 @@
 #include <iostream>
 #include "point.h"
 #include <math.h>
+#include "poligono.h"
+#include "retangulo.h"
 
 using namespace std;
 
 int main()
 {
-    //se for com ponteiro...por exemplo: *p0
+   /*//se for com ponteiro...por exemplo: *p0
     //tem que usar Point *p0 = new Point;
     //e dai pra chamar o método usa -> ao invez de .
     //mas vai ser alterado altomaticamente
@@ -34,7 +36,16 @@ int main()
     cout<<"Norma do ponto p1: "<<p1.norma()<<endl;
 
     p1.translada(5,3);
-    p1.imprime();
+    p1.imprime();*/
+
+    Retangulo r(0,0,4,3);
+
+    r.imprima();
+    cout<<"Area do ratangulo: "<<r.area()<<endl;
+    r.translada(-3,4);
+    cout<<"Area do ratangulo transladado: "<<r.area()<<endl;
+    r.rotaciona(30);
+    cout<<"Area do ratangulo rotacionado: "<<r.area()<<endl;
 
 return 0;
 }
