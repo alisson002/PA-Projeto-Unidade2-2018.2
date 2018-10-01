@@ -1,3 +1,3 @@
 # dca1202_Alisson Sousa Moreira
-## Projeto da 2ª unidade de Programação Avançada
-### POO: Criação das classes Point, Polígono e Retângulo
+## Projeto da 2Âª unidade de ProgramaÃ§Ã£o AvanÃ§ada
+### Tratamento de polÃ­gonos: CriaÃ§Ã£o das classes Point, PolÃ­gono e RetÃ¢ngulo
