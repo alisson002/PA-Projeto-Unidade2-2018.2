@@ -13,8 +13,8 @@ public:
 
     Point();                            //construtor
     ~Point();                           //destrutor
-    void setX(float mx);                //ponto x, e atualiza o valor
-    void setY(float my);                //ponto y, e atualiza o valor
+    void setX(float mx);                //atualiza o valor do ponto
+    void setY(float my);                //atualiza o valor do ponto
     void setXY(float mx, float my);     //pontos x e y
     float getX(void);                   //resgata o valor do ponto x, da o return
     float getY(void);                   //resgata o valor do ponto y, da o return

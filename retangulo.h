@@ -1,6 +1,7 @@
 #ifndef RETANGULO_H
 #define RETANGULO_H
 #include "poligono.h"
+#include "point.h"
 
 
 class Retangulo: public Poligono{

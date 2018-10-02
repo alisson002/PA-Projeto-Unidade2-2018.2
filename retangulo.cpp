@@ -6,24 +6,17 @@ using namespace std;
 
 Retangulo::Retangulo(float x,float y,float largura,float altura){
 
-    cout<<"Construtor Retangulo\n";
-
-    float dist,dist2;
-    dist = x+largura;
-    dist2 = y+altura;
-
-    Poligono ret;//retângulo do tipo poligono
+    float distX,distY;
+    distX = x+largura;
+    distY = y+altura;
 
     //métodos da classe poligono
-    ret.setVertices(x,y);
-    ret.setVertices(dist,y);
-    ret.setVertices(dist,dist2);
-    ret.setVertices(x,dist2);
+    setVertices(x,y);
+    setVertices(distX,y);
+    setVertices(distX,distY);
+    setVertices(x,distY);
 
 }
 
 Retangulo::~Retangulo(){
-
-     cout<<"Destrutor Retangulo\n";
-
 }

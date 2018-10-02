@@ -5,12 +5,8 @@
 using namespace std;
 
 Point::Point(){
-
-
 }
 Point::~Point(){
-
-
 }
 void Point::setX(float mx){           //Define o valor da coordenada x do ponto.
 
@@ -64,7 +60,7 @@ void Point::translada(float a, float b){//Translada o ponto (x,y) de (+a,+b), de
 }
 void Point::imprime(void){//Imprime o ponto na forma (xpos, ypos).
 
-    cout<<"Forma (xpos, ypos): ("<<x<<" , "<<y<<")"<<endl;
+    cout<<"("<<x<<" , "<<y<<")";
 
 }
 

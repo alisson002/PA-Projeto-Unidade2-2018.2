@@ -8,18 +8,18 @@ class Poligono{
 private:
 
     Point vertices[100];
-    int pontos = 1;
+    int pontos = 0;
 
 public:
 
     Poligono();//construtor
     ~Poligono();//destrutor
     void setVertices(float mx, float my);
-    float getVertices(void);
+    int getVertices(void);
     float area(void);
     void translada(float a, float b);
     void rotaciona(float theta);
-    void imprima(void);
+    void imprime(void);
 
 };
 
