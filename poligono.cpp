@@ -13,8 +13,13 @@ Poligono::~Poligono(){
 }
 void Poligono::setVertices(float mx, float my){
 
-    vertices[pontos].setXY(mx,my);
-    pontos++;
+    if(pontos<100){
+        vertices[pontos].setXY(mx,my);
+        pontos++;
+    }
+    else{
+        cout<<"Maximo de vertices atingido."<<endl;
+    }
 
 }
 
@@ -61,7 +66,7 @@ void Poligono::translada(float a, float b){
 //No for do método rotaciona tive que usar <= para obter o resultado esperado
 //diferente do for dos métodos area e imprime que funcionaram normalmente somente com <
 //não sei o motivo, **pesquisar dps**
-void Poligono::rotaciona(float theta){
+void Poligono::rotaciona(float theta, Point p, float a, float b){
     //usando theta*PI/180 para converter para radianos
     //para um uso correto das funções cos e sin de acordo
     //com o exemplo do c plus plus
@@ -69,16 +74,12 @@ void Poligono::rotaciona(float theta){
     float pX,pY;
 
     for(int cont=0;cont<=pontos;cont++){
-        /*
-            vertices[cont].setX((vertices[cont].getX()*cos((theta*PI)/180.0))-(vertices[cont].getY()*sin((theta*PI)/180.0)));
-            vertices[cont].setY((vertices[cont].getX()*sin((theta*PI)/180.0))+(vertices[cont].getY()*cos((theta*PI)/180.0)));
 
-            Desta forma não estava funcionando corretamente
-        */
+        vertices[cont].sub(a,b);//para retornar a posição original
 
-        pX = (vertices[cont].getX()*cos((theta*PI)/180.0))-(vertices[cont].getY()*sin((theta*PI)/180.0));
+        pX = p.getX()+(vertices[cont].getX()*cos((theta*PI)/180.0))-(vertices[cont].getY()*sin((theta*PI)/180.0));
 
-        pY = (vertices[cont].getX()*sin((theta*PI)/180.0))+(vertices[cont].getY()*cos((theta*PI)/180.0));
+        pY = p.getY()+(vertices[cont].getX()*sin((theta*PI)/180.0))+(vertices[cont].getY()*cos((theta*PI)/180.0));
 
         vertices[cont].setXY(pX,pY);
     }

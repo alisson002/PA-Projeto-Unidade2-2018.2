@@ -35,30 +35,36 @@ float Point::getY(void){            //Recupera o valor da coordenada y do ponto.
 
 }
 //para o método add e sub também é possível usar o setXY
-void Point::add(Point p){           //Adiciona as coordenadas (x,y) do ponto com as coordenadas
-                                    //de um ponto P1(x1,y1) fornecido, armazenando o resultado
-    x = x+p.x;                      //(x+x1,y+y1)  nas coordenadas de um novo ponto, que
-    y = y+p.y;                      //deverá ser retornado para o cliente da classe.
+void Point::add(Point p){
+
+    x = x+p.x;
+    y = y+p.y;
 
 }
 void Point::sub(Point p){
-                                    //Adiciona as coordenadas (x,y) do ponto com as coordenadas
-    x = x-p.y;                     //de um ponto P1(x1,y1) fornecido, armazenando o resultado
-    y = y-p.y;                     //(x-x1,y-y1)  nas coordenadas de um novo ponto, que
-                                   //deverá ser retornado para o cliente da classe.
+
+    x = x-p.y;
+    y = y-p.y;
+
+}
+
+void Point::sub(float a, float b)
+{
+    x = x-a;
+    y = y-b;
 }
 float Point::norma(void){         //retorna a distância do ponto para a origen
 
-    return sqrt(x*x+y*y);//**corrigir**
+    return sqrt(x*x+y*y);
 
 }
-void Point::translada(float a, float b){//Translada o ponto (x,y) de (+a,+b), de modo que, após a
-                                         //execução do método, as coordenadas do ponto serão (x+a,y+b)
+void Point::translada(float a, float b){
+
     x = x+a;
     y = y+b;
 
 }
-void Point::imprime(void){//Imprime o ponto na forma (xpos, ypos).
+void Point::imprime(void){
 
     cout<<"("<<x<<" , "<<y<<")";
 
